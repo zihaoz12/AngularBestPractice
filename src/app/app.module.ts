@@ -15,7 +15,6 @@ import { SharedModule } from './shared/shared.module';
     AppRoutingModule,
     CoreModule,
     HomeModule,
-    PostsModule,
     SharedModule
   ],
   providers: [],

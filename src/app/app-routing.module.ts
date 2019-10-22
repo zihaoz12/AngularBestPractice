@@ -6,7 +6,10 @@ import { PageNotFundComponent } from './core/components/page-not-fund/page-not-f
 
 const routes: Routes = [
   { path: 'home', component: HomeComponent },
-  { path: 'posts', component: PostsComponent },
+  {
+    path: 'posts',
+    loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
+  },
   {
     path: '',
     redirectTo: '/home',

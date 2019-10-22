@@ -35,22 +35,5 @@
   </div>
 </section>
 <app-modal id="comments-modal">
-  <table class="comments-table">
-    <tr>
-      <th>ID</th>
-      <th>Title</th>
-      <th>Body</th>
-    </tr>
-    <tr *ngFor="let comment of comments">
-      <td>
-        {{ comment.email }}
-      </td>
-      <td>
-        {{ comment.name }}
-      </td>
-      <td>
-        {{ comment.body }}
-      </td>
-    </tr>
-  </table>
+  <app-comments [comments]="comments"></app-comments>
 </app-modal>

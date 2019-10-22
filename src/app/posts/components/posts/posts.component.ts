@@ -24,7 +24,6 @@ export class PostsComponent implements OnInit {
 
   getPosts() {
     this.postsService.getPosts().subscribe(data => {
-      console.log(data);
       this.posts = data;
     });
   }
@@ -34,7 +33,6 @@ export class PostsComponent implements OnInit {
 
   showComments(id) {
     this.commentsService.getCommentsByPostId(id).subscribe(data => {
-      console.log(data);
       this.comments = data;
       this.modalService.showModal('comments-modal');
     });
