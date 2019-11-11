@@ -1,39 +1,25 @@
-import { LimitCharPipe } from './limit-char.pipe';
-import { defaultValue } from './limit-char.pipe';
+import { defaultValue, LimitCharPipe } from './limit-char.pipe';
 
 describe('LimitCharPipe', () => {
+  beforeEach(() => {});
+
+  const limitCharPipe = new LimitCharPipe();
+
   it('should create', () => {
-    const limitCharPipe = new LimitCharPipe();
     expect(limitCharPipe).toBeTruthy();
   });
 
-  it(`should transform the string that has more then limitNumber chars to the string...`, () => {
-    const limitCharPipe = new LimitCharPipe();
-    const inputString = 'abcdefgdsfdsfsdfsadfafdsafasfafafdsfasfafafdsfafds';
-    const expectString = 'abcde...';
-    const limitNumber = 5;
-    expect(limitCharPipe.transform(inputString, limitNumber)).toBe(
-      expectString
-    );
+  it(`should return the limit ${defaultValue.limitNum} Char string by default if the input has more than ${defaultValue.limitNum} char string`, () => {
+    const input =
+      'Hello Patrick12321321312312321321312312321312312312313213123123123123';
+    const expectOutput = input.slice(0, defaultValue.limitNum) + '...';
+    expect(limitCharPipe.transform(input)).toBe(expectOutput);
   });
 
-  it('should transform the string than has less then limitNumber chars to original one', () => {
-    const limitCharPipe = new LimitCharPipe();
-    const inputString = 'sdf';
-    const expectString = inputString;
-    const limitNumber = 20;
-    expect(limitCharPipe.transform(inputString, limitNumber)).toBe(
-      expectString
-    );
+  it(`should return itself by default if the input has no more than ${defaultValue.limitNum} char string`, () => {
+    const input = 'Hello Patrick';
+    const expectOutput = input;
+    expect(limitCharPipe.transform(input)).toBe(expectOutput);
   });
-
-  it('should show warning if the inputString is not a string', () => {
-    const limitCharPipe = new LimitCharPipe();
-    const inputString = 'sdf';
-    const expectString = inputString;
-    const limitNumber = 20;
-    expect(limitCharPipe.transform(inputString, limitNumber)).toBe(
-      expectString
-    );
-  });
+  it(`should show warning if the input is not a string `, () => {});
 });

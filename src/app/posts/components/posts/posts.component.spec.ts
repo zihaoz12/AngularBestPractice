@@ -1,21 +1,56 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
-
+import { TestBed, async, ComponentFixture } from '@angular/core/testing';
 import { PostsComponent } from './posts.component';
+import { NO_ERRORS_SCHEMA } from '@angular/core';
+import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
+import { PostsService } from '../../services/posts.service';
+import { CommentsService } from '../../services/comments.service';
+import { ModalService } from '../../../shared/services/modal.service';
 
-xdescribe('PostsComponent', () => {
+// import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+
+// import { PostsComponent } from './posts.component';
+
+// describe('PostsComponent', () => {
+//   let component: PostsComponent;
+//   let fixture: ComponentFixture<PostsComponent>;
+
+//   beforeEach(async(() => {
+//     TestBed.configureTestingModule({
+//       declarations: [PostsComponent]
+//     }).compileComponents();
+//   }));
+
+//   beforeEach(() => {
+//     fixture = TestBed.createComponent(PostsComponent);
+//     component = fixture.componentInstance;
+//     fixture.detectChanges();
+//   });
+
+//   it('should create', () => {
+//     expect(component).toBeTruthy();
+//   });
+// });
+
+const PostsServiceStub = {};
+const CommentsServiceStub = {};
+const ModalServiceStub = {};
+
+describe('PostsComponent', () => {
   let component: PostsComponent;
   let fixture: ComponentFixture<PostsComponent>;
 
-  beforeEach(async(() => {
+  beforeEach(async () => {
     TestBed.configureTestingModule({
-      declarations: [PostsComponent]
+      declarations: [PostsComponent],
+      providers: [
+        { provide: PostsService, useValue: PostsServiceStub },
+        { provide: CommentsService, useValue: CommentsServiceStub },
+        { provide: ModalService, useValue: ModalServiceStub }
+      ],
+      schemas: [CUSTOM_ELEMENTS_SCHEMA]
     }).compileComponents();
-  }));
-
-  beforeEach(() => {
     fixture = TestBed.createComponent(PostsComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
+    component = fixture.debugElement.componentInstance;
   });
 
   it('should create', () => {
