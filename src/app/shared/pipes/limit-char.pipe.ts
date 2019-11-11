@@ -1,14 +1,14 @@
-import { Pipe, PipeTransform } from '@angular/core';
+import { Pipe, PipeTransform } from "@angular/core";
 
 export const defaultValue = {
   limitNum: 30
 };
 
 @MyPipe({
-  name: 'patrick'
+  name: "patrick"
 })
 @Pipe({
-  name: 'limitChar'
+  name: "limitChar"
 })
 export class LimitCharPipe implements PipeTransform {
   transform(
@@ -16,12 +16,12 @@ export class LimitCharPipe implements PipeTransform {
     limitNum = defaultValue.limitNum,
     ...args: any[]
   ): string {
-    if (typeof value !== 'string') {
-      console.warn('LimitCharPipe input is not a string');
+    if (typeof value !== "string") {
+      console.warn("LimitCharPipe input is not a string");
       return value;
     }
     if (value.length > limitNum) {
-      return value.slice(0, limitNum) + '...';
+      return value.slice(0, limitNum) + "...";
     }
     return value;
   }
@@ -29,7 +29,7 @@ export class LimitCharPipe implements PipeTransform {
 
 function MyPipe(config) {
   console.log(config);
-  return function(pipe) {
+  return pipe => {
     return pipe;
   };
 }
