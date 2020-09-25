@@ -1,0 +1,47 @@
+.cards-container{
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+}
+
+.card{
+  transition: transform 0.5s;
+  transform-style: preserve-3d;
+  border-radius: 6px;
+  height: 300px;
+  width: 150px;
+  margin: 10px;
+  position: relative;
+  cursor: pointer;
+  .card-front,  .card-back{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
+  }
+}
+
+
+
+.card-back{
+  border: 1px solid red;
+  background-image: url('../../../../assets/images/back.png');
+  background-position: center; /* Center the image */
+  background-repeat: no-repeat; /* Do not repeat the image */
+  background-size: cover;
+}
+
+
+.card-front{
+  border: 1px solid green;
+  background-color: #fff;
+  transform: rotateY(180deg);
+}
+.isFliped{
+  transform: rotateY(180deg);
+}
+
+
+
+
+

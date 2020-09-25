@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/components/home/home.component';
-import { PostsComponent } from './posts/components/posts/posts.component';
+
 import { PageNotFundComponent } from './core/components/page-not-fund/page-not-fund.component';
 
 const routes: Routes = [
@@ -9,6 +9,10 @@ const routes: Routes = [
   {
     path: 'posts',
     loadChildren: () => import('./posts/posts.module').then(m => m.PostsModule)
+  },
+  {
+    path:'main',
+    loadChildren:() => import('./main/main.module').then(m => m.MainModule)
   },
   {
     path: '',

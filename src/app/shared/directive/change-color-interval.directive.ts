@@ -7,9 +7,10 @@ export class ChangeColorIntervalDirective implements OnInit, OnDestroy {
   @Input() intervalTime = 1;
   timeAction;
 
+
   constructor(private elementRef: ElementRef) {}
   ngOnInit() {
-    console.log('init');
+    console.log('change color');
 
     this.timeAction = setInterval(() => {
       this.elementRef.nativeElement.style.color = this.getRandomColor();

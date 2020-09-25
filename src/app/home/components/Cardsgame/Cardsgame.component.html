@@ -1,0 +1,16 @@
+<div class="cards-container">
+  <button (click)="reset()">Reset</button>
+  <div *ngFor="let card of cards">
+    <div class="card"  (click)="flipCard(card)" [ngClass]="{'isFliped': card.isFliped}">
+      <div class="card-back">
+          Card-Back
+      </div>
+      <div class="card-front">
+          Card-Front: {{card.value}}
+      </div>
+    </div>
+  </div>
+</div>
+
+
+
