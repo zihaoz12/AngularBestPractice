@@ -1,3 +1,30 @@
-<p>
-  youtube works!
-</p>
+<div class="youtube-container">
+  <div class="ui centered grid" style="margin-top: 3rem;">
+    <div class="fourteen wide column">
+      <h1 class="ui centered aligned header">
+        <span style="vertical-align: middle;">Youtube Search </span>
+      </h1>
+      <div class="ui four column grid">
+        <div class="ten wide column centered">
+          <div class="ui fluid action input">
+            <input
+              #input
+              value=""
+              type="text"
+              placeholder="Search for a video...">
+          </div>
+          <button (click)="getVideos(input.value)">Search</button>
+        </div>
+      </div>
+
+      <div *ngIf="loading" style="margin: 3rem;">
+        <div class="ui active centered inline loader"></div>
+      </div>
+
+      <app-search-list *ngIf="!loading" [videos]='videos'></app-search-list>
+    </div>
+  </div>
+
+
+
+</div>
