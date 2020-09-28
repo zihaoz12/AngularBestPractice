@@ -4,18 +4,7 @@
       <h1 class="ui centered aligned header">
         <span style="vertical-align: middle;">Youtube Search </span>
       </h1>
-      <div class="ui four column grid">
-        <div class="ten wide column centered">
-          <div class="ui fluid action input">
-            <input
-              #input
-              value=""
-              type="text"
-              placeholder="Search for a video...">
-          </div>
-          <button (click)="getVideos(input.value)">Search</button>
-        </div>
-      </div>
+      <app-search-input (search)="getVideos($event)"></app-search-input>
 
       <div *ngIf="loading" style="margin: 3rem;">
         <div class="ui active centered inline loader"></div>
