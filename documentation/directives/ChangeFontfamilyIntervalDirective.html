@@ -37,7 +37,7 @@
 
 <ol class="breadcrumb">
   <li>Directives</li>
-  <li>ChangeColorIntervalDirective</li>
+  <li>ChangeFontfamilyIntervalDirective</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -55,7 +55,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/shared/directive/change-color-interval.directive.ts</code>
+            <code>src/app/shared/directive/change-fontfamily-interval.directive.ts</code>
         </p>
 
 
@@ -75,7 +75,7 @@
 
                     <tr>
                         <td class="col-md-3">Selector</td>
-                        <td class="col-md-9"><code>[appChangeColorInterval]</code></td>
+                        <td class="col-md-9"><code>[appChangeFontfamilyInterval]</code></td>
                     </tr>
 
                 </tbody>
@@ -95,6 +95,12 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#currentIndex">currentIndex</a>
+                            </li>
+                            <li>
+                                <a href="#fontFamilyArray">fontFamilyArray</a>
+                            </li>
+                            <li>
                                 <a href="#timeAction">timeAction</a>
                             </li>
                         </ul>
@@ -109,9 +115,6 @@
                 <tr>
                     <td class="col-md-4">
                         <ul class="index-list">
-                            <li>
-                                <a href="#getRandomColor">getRandomColor</a>
-                            </li>
                             <li>
                                 <a href="#ngOnDestroy">ngOnDestroy</a>
                             </li>
@@ -131,7 +134,7 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
-                                <a href="#intervalTime">intervalTime</a>
+                                <a href="#intervaltime">intervaltime</a>
                             </li>
                         </ul>
                     </td>
@@ -155,7 +158,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/shared/directive/change-color-interval.directive.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/directive/change-fontfamily-interval.directive.ts:15</a></div>
                             </td>
                         </tr>
 
@@ -199,8 +202,8 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
-                        <a name="intervalTime"></a>
-                        <b>intervalTime</b>
+                        <a name="intervaltime"></a>
+                        <b>intervaltime</b>
                     </td>
                 </tr>
                 <tr>
@@ -210,7 +213,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-2" colspan="2">
-                                    <div class="io-line">Defined in <a href="" data-line="7" class="link-to-prism">src/app/shared/directive/change-color-interval.directive.ts:7</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="9" class="link-to-prism">src/app/shared/directive/change-fontfamily-interval.directive.ts:9</a></div>
                             </td>
                         </tr>
             </tbody>
@@ -224,45 +227,6 @@
     <h3 id="methods">
         Methods
     </h3>
-    <table class="table table-sm table-bordered">
-        <tbody>
-            <tr>
-                <td class="col-md-4">
-                    <a name="getRandomColor"></a>
-                    <span class="name">
-                        <b>
-                            getRandomColor
-                        </b>
-                        <a href="#getRandomColor"><span class="icon ion-ios-link"></span></a>
-                    </span>
-                </td>
-            </tr>
-            <tr>
-                <td class="col-md-4">
-<code>getRandomColor()</code>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="20"
-                            class="link-to-prism">src/app/shared/directive/change-color-interval.directive.ts:20</a></div>
-                </td>
-            </tr>
-
-
-            <tr>
-                <td class="col-md-4">
-
-                    <div class="io-description">
-                        <b>Returns : </b>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/string" target="_blank" >string</a></code>
-
-                    </div>
-                </td>
-            </tr>
-        </tbody>
-    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -285,8 +249,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="28"
-                            class="link-to-prism">src/app/shared/directive/change-color-interval.directive.ts:28</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="31"
+                            class="link-to-prism">src/app/shared/directive/change-fontfamily-interval.directive.ts:31</a></div>
                 </td>
             </tr>
 
@@ -324,8 +288,8 @@
 
             <tr>
                 <td class="col-md-4">
-                    <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/shared/directive/change-color-interval.directive.ts:12</a></div>
+                    <div class="io-line">Defined in <a href="" data-line="20"
+                            class="link-to-prism">src/app/shared/directive/change-fontfamily-interval.directive.ts:20</a></div>
                 </td>
             </tr>
 
@@ -351,6 +315,70 @@
             <tbody>
                 <tr>
                     <td class="col-md-4">
+                        <a name="currentIndex"></a>
+                        <span class="name">
+                            <b>
+                            currentIndex</b>
+                            <a href="#currentIndex"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>        <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/number" target="_blank" >number</a></code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>0</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="13" class="link-to-prism">src/app/shared/directive/change-fontfamily-interval.directive.ts:13</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
+                        <a name="fontFamilyArray"></a>
+                        <span class="name">
+                            <b>
+                            fontFamilyArray</b>
+                            <a href="#fontFamilyArray"><span class="icon ion-ios-link"></span></a>
+                        </span>
+                    </td>
+                </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Type : </i>    <code>[]</code>
+
+                        </td>
+                    </tr>
+                    <tr>
+                        <td class="col-md-4">
+                            <i>Default value : </i><code>[&#x27;monospace&#x27;,&#x27;times&#x27;,&#x27;fantasy&#x27;]</code>
+                        </td>
+                    </tr>
+                        <tr>
+                            <td class="col-md-4">
+                                    <div class="io-line">Defined in <a href="" data-line="15" class="link-to-prism">src/app/shared/directive/change-fontfamily-interval.directive.ts:15</a></div>
+                            </td>
+                        </tr>
+
+
+            </tbody>
+        </table>
+        <table class="table table-sm table-bordered">
+            <tbody>
+                <tr>
+                    <td class="col-md-4">
                         <a name="timeAction"></a>
                         <span class="name">
                             <b>
@@ -361,7 +389,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                    <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/shared/directive/change-color-interval.directive.ts:8</a></div>
+                                    <div class="io-line">Defined in <a href="" data-line="11" class="link-to-prism">src/app/shared/directive/change-fontfamily-interval.directive.ts:11</a></div>
                             </td>
                         </tr>
 
@@ -375,36 +403,42 @@
 
 
     <div class="tab-pane fade  tab-source-code" id="c-source">
-        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, ElementRef, OnInit, Input, OnDestroy } from &#x27;@angular/core&#x27;;
+        <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Directive, Input, ElementRef,OnInit, OnDestroy } from &#x27;@angular/core&#x27;;
+
 
 @Directive({
-  selector: &#x27;[appChangeColorInterval]&#x27;
+  selector: &#x27;[appChangeFontfamilyInterval]&#x27;
 })
-export class ChangeColorIntervalDirective implements OnInit, OnDestroy {
-  @Input() intervalTime &#x3D; 1;
+export class ChangeFontfamilyIntervalDirective implements OnInit,OnDestroy{
+
+  @Input() intervaltime &#x3D; 1
+
   timeAction;
 
+  currentIndex &#x3D; 0;
 
-  constructor(private elementRef: ElementRef) {}
-  ngOnInit() {
-    console.log(&#x27;change color&#x27;);
+  fontFamilyArray&#x3D; [&#x27;monospace&#x27;,&#x27;times&#x27;,&#x27;fantasy&#x27;]
 
-    this.timeAction &#x3D; setInterval(() &#x3D;&gt; {
-      this.elementRef.nativeElement.style.color &#x3D; this.getRandomColor();
-    }, this.intervalTime * 1000);
+  constructor( private elementRef: ElementRef) {
   }
 
-  getRandomColor() {
-    return (
-      &#x27;#&#x27; +
-      Math.random()
-        .toString(16)
-        .substr(-6)
-    );
+  ngOnInit(){
+    console.log(&#x27;change font&#x27;);
+    this.timeAction &#x3D; setInterval(()&#x3D;&gt;{
+      this.currentIndex++;
+      if(this.currentIndex &gt; this.fontFamilyArray.length-1){
+        this.currentIndex &#x3D; 0;
+      }
+      this.elementRef.nativeElement.style.fontFamily &#x3D; this.fontFamilyArray[this.currentIndex]
+    },this.intervaltime * 1000)
   }
-  ngOnDestroy() {
-    clearInterval(this.timeAction);
+
+  ngOnDestroy(){
+    this.timeAction
   }
+
+
+
 }
 </code></pre>
     </div>
@@ -440,7 +474,7 @@ export class ChangeColorIntervalDirective implements OnInit, OnDestroy {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'directive';
-            var COMPODOC_CURRENT_PAGE_URL = 'ChangeColorIntervalDirective.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'ChangeFontfamilyIntervalDirective.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

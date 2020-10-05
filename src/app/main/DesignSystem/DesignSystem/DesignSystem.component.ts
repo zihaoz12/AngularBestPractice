@@ -12,4 +12,8 @@ export class DesignSystemComponent implements OnInit {
   ngOnInit() {
   }
 
+  clickEvent(){
+    console.log('click')
+  }
+
 }

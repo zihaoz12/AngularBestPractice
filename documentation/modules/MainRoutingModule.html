@@ -34,7 +34,7 @@
 
 <ol class="breadcrumb">
     <li>Modules</li>
-    <li>AppRoutingModule</li>
+    <li>MainRoutingModule</li>
 </ol>
 
 
@@ -54,7 +54,7 @@
             <h3>File</h3>
         </p>
         <p class="comment">
-            <code>src/app/app-routing.module.ts</code>
+            <code>src/app/main/mainRouting.module.ts</code>
         </p>
 
 
@@ -72,37 +72,30 @@
     <div class="tab-pane fade  tab-source-code" id="c-source">
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { NgModule } from &#x27;@angular/core&#x27;;
 import { Routes, RouterModule } from &#x27;@angular/router&#x27;;
-import { HomeComponent } from &#x27;./home/components/home/home.component&#x27;;
-
-import { PageNotFundComponent } from &#x27;./core/components/page-not-fund/page-not-fund.component&#x27;;
+import { YoutubeComponent } from &#x27;./Youtube/components/youtube/youtube.component&#x27;;
+import { RouterDemoComponent } from &#x27;./RouterDemo/RouterDemo/RouterDemo.component&#x27;;
+import { DesignSystemComponent } from &#x27;./DesignSystem/DesignSystem/DesignSystem.component&#x27;;
 
 const routes: Routes &#x3D; [
-  { path: &#x27;home&#x27;, component: HomeComponent },
   {
-    path: &#x27;posts&#x27;,
-    loadChildren: () &#x3D;&gt; &quot;import(&#x27;./posts/posts.module&#x27;).then(m &#x3D;&gt; m.PostsModule)&quot;
+    path: &#x27;youtube&#x27;,
+    component: YoutubeComponent
   },
   {
-    path:&#x27;main&#x27;,
-    loadChildren:() &#x3D;&gt; &quot;import(&#x27;./main/main.module&#x27;).then(m &#x3D;&gt; m.MainModule)&quot;
+    path:&#x27;router-demo&#x27;,
+    component: RouterDemoComponent
   },
   {
-    path: &#x27;&#x27;,
-    redirectTo: &#x27;/home&#x27;,
-    pathMatch: &#x27;full&#x27;
-  },
-  {
-    path: &#x27;**&#x27;,
-    component: PageNotFundComponent
+    path:&#x27;design-system&#x27;,
+    component: DesignSystemComponent
   }
-
 ];
 
 @NgModule({
-  imports: [RouterModule.forRoot(routes)],
+  imports: [RouterModule.forChild(routes)],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class MainRoutingModule {}
 </code></pre>
     </div>
 </div>
@@ -138,7 +131,7 @@ export class AppRoutingModule {}
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'module';
-            var COMPODOC_CURRENT_PAGE_URL = 'AppRoutingModule.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'MainRoutingModule.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 

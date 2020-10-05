@@ -35,7 +35,7 @@
 
 <ol class="breadcrumb">
   <li>Components</li>
-  <li>HeaderComponent</li>
+  <li>DesignSystemComponent</li>
 </ol>
 
 <ul class="nav nav-tabs" role="tablist">
@@ -61,7 +61,7 @@
     <h3>File</h3>
 </p>
 <p class="comment">
-    <code>src/app/core/components/header/header.component.ts</code>
+    <code>src/app/main/DesignSystem/DesignSystem/DesignSystem.component.ts</code>
 </p>
 
 
@@ -91,19 +91,19 @@
 
             <tr>
                 <td class="col-md-3">selector</td>
-                <td class="col-md-9"><code>app-header</code></td>
+                <td class="col-md-9"><code>app-DesignSystem</code></td>
             </tr>
 
             <tr>
                 <td class="col-md-3">styleUrls</td>
-                <td class="col-md-9"><code>./header.component.scss</code></td>
+                <td class="col-md-9"><code>./DesignSystem.component.scss</code></td>
             </tr>
 
 
 
             <tr>
                 <td class="col-md-3">templateUrl</td>
-                <td class="col-md-9"><code>./header.component.html</code></td>
+                <td class="col-md-9"><code>./DesignSystem.component.html</code></td>
             </tr>
 
 
@@ -131,6 +131,9 @@
                     <td class="col-md-4">
                         <ul class="index-list">
                             <li>
+                                <a href="#clickEvent">clickEvent</a>
+                            </li>
+                            <li>
                                 <a href="#ngOnInit">ngOnInit</a>
                             </li>
                         </ul>
@@ -156,7 +159,7 @@
                 </tr>
                         <tr>
                             <td class="col-md-4">
-                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/core/components/header/header.component.ts:8</a></div>
+                                <div class="io-line">Defined in <a href="" data-line="8" class="link-to-prism">src/app/main/DesignSystem/DesignSystem/DesignSystem.component.ts:8</a></div>
                             </td>
                         </tr>
 
@@ -173,6 +176,45 @@
     <h3 id="methods">
         Methods
     </h3>
+    <table class="table table-sm table-bordered">
+        <tbody>
+            <tr>
+                <td class="col-md-4">
+                    <a name="clickEvent"></a>
+                    <span class="name">
+                        <b>
+                            clickEvent
+                        </b>
+                        <a href="#clickEvent"><span class="icon ion-ios-link"></span></a>
+                    </span>
+                </td>
+            </tr>
+            <tr>
+                <td class="col-md-4">
+<code>clickEvent()</code>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+                    <div class="io-line">Defined in <a href="" data-line="15"
+                            class="link-to-prism">src/app/main/DesignSystem/DesignSystem/DesignSystem.component.ts:15</a></div>
+                </td>
+            </tr>
+
+
+            <tr>
+                <td class="col-md-4">
+
+                    <div class="io-description">
+                        <b>Returns : </b>        <code><a href="https://www.typescriptlang.org/docs/handbook/basic-types.html" target="_blank" >void</a></code>
+
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
     <table class="table table-sm table-bordered">
         <tbody>
             <tr>
@@ -196,7 +238,7 @@
             <tr>
                 <td class="col-md-4">
                     <div class="io-line">Defined in <a href="" data-line="12"
-                            class="link-to-prism">src/app/core/components/header/header.component.ts:12</a></div>
+                            class="link-to-prism">src/app/main/DesignSystem/DesignSystem/DesignSystem.component.ts:12</a></div>
                 </td>
             </tr>
 
@@ -221,15 +263,19 @@
         <pre class="line-numbers compodoc-sourcecode"><code class="language-typescript">import { Component, OnInit } from &#x27;@angular/core&#x27;;
 
 @Component({
-  selector: &#x27;app-header&#x27;,
-  templateUrl: &#x27;./header.component.html&#x27;,
-  styleUrls: [&#x27;./header.component.scss&#x27;]
+  selector: &#x27;app-DesignSystem&#x27;,
+  templateUrl: &#x27;./DesignSystem.component.html&#x27;,
+  styleUrls: [&#x27;./DesignSystem.component.scss&#x27;]
 })
-export class HeaderComponent implements OnInit {
+export class DesignSystemComponent implements OnInit {
 
   constructor() { }
 
   ngOnInit() {
+  }
+
+  clickEvent(){
+    console.log(&#x27;click&#x27;)
   }
 
 }
@@ -237,44 +283,17 @@ export class HeaderComponent implements OnInit {
     </div>
 
     <div class="tab-pane fade " id="c-templateData">
-        <pre class="line-numbers"><code class="language-html">&lt;header class&#x3D;&quot;header&quot;&gt;
-  &lt;nav class&#x3D;&quot;nav-list&quot;&gt;
-    &lt;div class&#x3D;&quot;nav-list__item&quot; routerLink&#x3D;&quot;/home&quot;&gt;HOME&lt;/div&gt;
-    &lt;div class&#x3D;&quot;nav-list__item&quot; routerLink&#x3D;&quot;/posts&quot;&gt;POSTS&lt;/div&gt;
-    &lt;div class&#x3D;&quot;nav-list__item&quot; routerLink&#x3D;&quot;/main/youtube&quot;&gt;YouTube&lt;/div&gt;
-    &lt;div class&#x3D;&quot;nav-list__item&quot; routerLink&#x3D;&quot;/main/router-demo&quot;&gt;Router Demo&lt;/div&gt;
-    &lt;div class&#x3D;&quot;nav-list__item&quot; routerLink&#x3D;&quot;/main/design-system&quot;&gt;Design System&lt;/div&gt;
-  &lt;/nav&gt;
-&lt;/header&gt;
+        <pre class="line-numbers"><code class="language-html">&lt;app-MyButton (click)&#x3D;&quot;clickEvent()&quot;&gt;
+  Button
+&lt;/app-MyButton&gt;
 </code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-styleData">
                 <p class="comment">
-                    <code>./header.component.scss</code>
+                    <code>./DesignSystem.component.scss</code>
                 </p>
-                <pre class="line-numbers"><code class="language-scss">.header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: 60px;
-  background-color: #1976d2;
-  .nav-list {
-    display: flex;
-    align-items: center;
-    width: 100%;
-    height: 100%;
-    padding-left: 50px;
-
-    &amp;__item {
-      padding: 10px;
-      color: white;
-      cursor: pointer;
-    }
-  }
-}
-</code></pre>
+                <pre class="line-numbers"><code class="language-scss"></code></pre>
     </div>
 
     <div class="tab-pane fade " id="c-tree">
@@ -302,10 +321,10 @@ export class HeaderComponent implements OnInit {
 <script src="../js/libs/htmlparser.js"></script>
 <script src="../js/libs/deep-iterator.js"></script>
 <script>
-        var COMPONENT_TEMPLATE = '<div><header class="header">  <nav class="nav-list">    <div class="nav-list__item" routerLink="/home">HOME</div>    <div class="nav-list__item" routerLink="/posts">POSTS</div>    <div class="nav-list__item" routerLink="/main/youtube">YouTube</div>    <div class="nav-list__item" routerLink="/main/router-demo">Router Demo</div>    <div class="nav-list__item" routerLink="/main/design-system">Design System</div>  </nav></header></div>'
+        var COMPONENT_TEMPLATE = '<div><app-MyButton (click)="clickEvent()">  Button</app-MyButton></div>'
     var COMPONENTS = [{'name': 'AppComponent', 'selector': 'app-root'},{'name': 'CanvasComponent', 'selector': 'app-canvas'},{'name': 'CardsgameComponent', 'selector': 'app-Cardsgame'},{'name': 'CommentsComponent', 'selector': 'app-comments'},{'name': 'DesignSystemComponent', 'selector': 'app-DesignSystem'},{'name': 'HeaderComponent', 'selector': 'app-header'},{'name': 'HomeComponent', 'selector': 'app-home'},{'name': 'ModalComponent', 'selector': 'app-modal'},{'name': 'PageNotFundComponent', 'selector': 'app-page-not-fund'},{'name': 'PostsComponent', 'selector': 'app-posts'},{'name': 'RelaxerComponent', 'selector': 'app-Relaxer'},{'name': 'RouterDemoComponent', 'selector': 'app-RouterDemo'},{'name': 'SearchInputComponent', 'selector': 'app-search-input'},{'name': 'SearchListComponent', 'selector': 'app-search-list'},{'name': 'YoutubeComponent', 'selector': 'app-youtube'}];
     var DIRECTIVES = [{'name': 'ChangeColorIntervalDirective', 'selector': '[appChangeColorInterval]'},{'name': 'ChangeFontfamilyIntervalDirective', 'selector': '[appChangeFontfamilyInterval]'}];
-    var ACTUAL_COMPONENT = {'name': 'HeaderComponent'};
+    var ACTUAL_COMPONENT = {'name': 'DesignSystemComponent'};
 </script>
 <script src="../js/tree.js"></script>
 
@@ -340,7 +359,7 @@ export class HeaderComponent implements OnInit {
        <script>
             var COMPODOC_CURRENT_PAGE_DEPTH = 1;
             var COMPODOC_CURRENT_PAGE_CONTEXT = 'component';
-            var COMPODOC_CURRENT_PAGE_URL = 'HeaderComponent.html';
+            var COMPODOC_CURRENT_PAGE_URL = 'DesignSystemComponent.html';
             var MAX_SEARCH_RESULTS = 15;
        </script>
 
