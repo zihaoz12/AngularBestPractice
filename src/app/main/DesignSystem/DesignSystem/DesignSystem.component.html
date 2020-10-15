@@ -1,3 +1,7 @@
-<app-MyButton (click)="clickEvent()">
-  Button
+<app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Primary" [name]="btnName">
+  {{btnName}}
+</app-MyButton>
+
+<app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Secondary" [id]="myid">
+  {{myid}}
 </app-MyButton>

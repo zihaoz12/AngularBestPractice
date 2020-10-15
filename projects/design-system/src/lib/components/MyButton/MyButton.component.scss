@@ -3,3 +3,165 @@
   cursor: pointer;
   background: green;
 }
+
+$my-primary-color: #0071bc;
+$my-primary-darker: #205493;
+$my-primary-darkest: #112e51;
+$my-secondary-color: #5b616b;
+$my-secondary-darker: #323a45;
+$my-tertiary-color:#d6d7d9;
+$my-tertiary-darker: #ebebe4;
+$my-tertiary-darkest: #57575c;
+$my-accent-color:#fdb81e;
+$my-accent-darker: #d99502;
+$my-accent-darkest: #bb8002;
+$my-notification-color:#009e51;
+$my-alert-color: #cd2026;
+$my-alert-darker: #981b1e;
+$my-text-color: #323a45;
+$my-background-color: #f1f1f1;
+$my-focus-color: #3e94cf;
+$my-focus-alt: #e7e7e7;
+$my-visited-color: #4c2c92;
+$my-alert-information: #e1f3f8;
+$my-alert-error: #f9dede;
+$my-alert-warning: #fff1d2;
+$my-alert-success: #e7f4e4;
+
+
+$my-box-shadow: 0 0 3px #3e94cf, 0 0 7px #3e94cf;
+
+$my-border-radius: 3px;
+$my-serif-font-family: "Merriweather", "Georgia", "Cambria", "Times New Roman", "Times", serif;
+$my-sans-serif-font-family: "Source Sans Pro", "Helvetica Neue", "Helvetica", "Roboto", "Arial", sans-serif;
+/*------------------------------------*\
+  #BUTTONS
+\*------------------------------------*/
+
+@mixin button {
+  width: 100%;
+  margin-bottom: 1rem;
+  border-radius: $my-border-radius;
+  min-height: 44px !important;
+  font-family: $my-sans-serif-font-family;
+  font-size: 1.1rem;
+  font-weight: 700;
+  border: none;
+  cursor: pointer;
+  transition: all .2s ease;
+
+  &:focus {
+      outline: none;
+      box-shadow: $my-box-shadow;
+  }
+
+  &:disabled {
+      color: #fff;
+      background-color: $my-tertiary-color;
+      border: 1px solid $my-tertiary-color;
+  }
+
+  &:disabled:hover {
+      background-color: $my-tertiary-color;
+      border: 1px solid $my-tertiary-color;
+      cursor: not-allowed;
+  }
+}
+
+.my-button-primary {
+  @include button;
+  color: #fff;
+  background-color: $my-primary-color;
+  border: 1px solid $my-primary-color;
+
+  &:hover {
+      background-color: $my-primary-darker;
+      border: 1px solid $my-primary-darker;
+  }
+
+  &:active {
+      background-color: $my-primary-darkest;
+      border: 1px solid $my-primary-darkest;
+  }
+
+  &:disabled:hover {
+      background-color: $my-tertiary-color;
+      border: 1px solid $my-tertiary-color;
+  }
+
+  &:disabled {
+      color: $my-text-color;
+  }
+}
+
+
+.my-button-secondary {
+  @include button;
+  color: $my-secondary-color;
+  background-color: #fff;
+  border: 1px solid $my-secondary-color;
+
+  &:hover {
+      color: #fff;
+      background-color: $my-secondary-color;
+  }
+
+  &:active {
+      background-color: $my-secondary-darker;
+      border: 1px solid $my-secondary-darker;
+  }
+
+  &:disabled:hover {
+      background-color: $my-tertiary-color;
+      border: 1px solid $my-tertiary-color;
+  }
+}
+
+
+.my-button-accent {
+  @include button;
+  color: #000;
+  background-color: $my-accent-color;
+  border: 1px solid $my-accent-color;
+
+  &:hover {
+      background-color: $my-accent-darker;
+      color: #fff;
+  }
+
+  &:active {
+      background-color: $my-accent-darkest;
+      color: #fff;
+  }
+
+  &:disabled:hover {
+      background-color: $my-tertiary-color;
+      border: 1px solid $my-tertiary-color;
+  }
+  &:disabled {
+      color: $my-text-color;
+  }
+}
+
+
+.my-button-destructive {
+  @include button;
+  color: $my-alert-color;
+  background-color: #fff;
+  border: 1px solid $my-alert-color;
+
+  &:hover {
+      color: #fff;
+      background-color: $my-alert-color;
+  }
+
+  &:active {
+      color: #fff;
+      background-color: $my-alert-darker;
+  }
+
+  &:disabled:hover {
+      background-color: $my-tertiary-color;
+      border: 1px solid $my-tertiary-color;
+  }
+}

@@ -1,3 +1,11 @@
-<button [class]="btn">
+<button class="my-button"
+      [id]='id' [name]='name'
+      [type]='type'
+      (click)="onClick()"
+      [ngClass]="{
+        'my-button-primary':typeEqualTo(MyButtonTypes.Primary),
+        'my-button-secondary':typeEqualTo(MyButtonTypes.Secondary)
+      }"
+>
   <ng-content></ng-content>
 </button>

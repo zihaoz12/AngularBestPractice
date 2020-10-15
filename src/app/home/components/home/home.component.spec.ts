@@ -1,6 +1,7 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
+import { By } from '@angular/platform-browser';
 
 xdescribe('HomeComponent', () => {
   let component: HomeComponent;
@@ -21,4 +22,6 @@ xdescribe('HomeComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+
+
 });
