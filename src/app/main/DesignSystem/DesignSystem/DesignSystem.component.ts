@@ -2,8 +2,12 @@ import { Component, OnInit } from '@angular/core';
 
 export enum MyButtonTypes{
   Primary = 'Primary',
-  Secondary = 'Secondary'
+  Secondary = 'Secondary',
+  Accent = 'Accent',
+  Destructive = 'Destructive'
 }
+
+
 @Component({
   selector: 'app-DesignSystem',
   templateUrl: './DesignSystem.component.html',

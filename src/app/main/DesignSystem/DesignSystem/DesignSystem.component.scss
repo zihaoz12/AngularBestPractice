@@ -1,4 +1,10 @@
+
+.btn-group-container{
+  display: flex;
+  flex-direction: row;
+}
 .btn-container{
   width: 200px;
-  height: 150px;
+  height: 50px;
+  margin: 5px;
 }

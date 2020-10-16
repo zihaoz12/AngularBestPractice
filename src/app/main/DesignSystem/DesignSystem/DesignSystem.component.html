@@ -1,7 +1,26 @@
-<app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Primary" [name]="btnName">
-  {{btnName}}
-</app-MyButton>
+<div class="btn-group-container">
+  <div class="btn-container">
+    <app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Primary" [name]="btnName">
+      {{btnName}}
+    </app-MyButton>
+  </div>
 
-<app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Secondary" [id]="myid">
-  {{myid}}
-</app-MyButton>
+
+  <div class="btn-container">
+    <app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Secondary" [id]="myid">
+      {{myid}}
+    </app-MyButton>
+  </div>
+
+  <div class="btn-container">
+    <app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Destructive" [name]="btnName">
+      {{btnName}}
+    </app-MyButton>
+  </div>
+
+  <div class="btn-container">
+    <app-MyButton (click)="clickEvent()" [myType]="MyButtonTypes.Accent" [name]="btnName">
+      {{btnName}}
+    </app-MyButton>
+  </div>
+</div>

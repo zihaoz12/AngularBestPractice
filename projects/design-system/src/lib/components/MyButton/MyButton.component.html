@@ -4,7 +4,9 @@
       (click)="onClick()"
       [ngClass]="{
         'my-button-primary':typeEqualTo(MyButtonTypes.Primary),
-        'my-button-secondary':typeEqualTo(MyButtonTypes.Secondary)
+        'my-button-secondary':typeEqualTo(MyButtonTypes.Secondary),
+        'my-button-accent':typeEqualTo(MyButtonTypes.Accent),
+        'my-button-destructive ':typeEqualTo(MyButtonTypes.Destructive)
       }"
 >
   <ng-content></ng-content>

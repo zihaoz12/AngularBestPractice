@@ -4,7 +4,7 @@ import { Component, OnInit,Output,Input,EventEmitter } from '@angular/core';
 export enum MyButtonTypes{
   Primary = 'Primary',
   Secondary = 'Secondary',
-  Link = 'Link',
+  Destructive = 'Destructive',
   Accent = 'Accent'
 }
 @Component({
