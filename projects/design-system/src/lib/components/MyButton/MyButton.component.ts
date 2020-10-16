@@ -10,7 +10,7 @@ export enum MyButtonTypes{
 @Component({
   selector: 'app-MyButton',
   templateUrl: './MyButton.component.html',
-  styleUrls: ['./MyButton.component.scss']
+  styleUrls: ['./_MyButton.component.scss']
 })
 export class MyButtonComponent implements OnInit {
 
