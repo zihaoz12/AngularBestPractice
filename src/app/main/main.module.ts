@@ -6,7 +6,8 @@ import { SearchListComponent } from './Youtube/components/youtube/search-list/se
 import { SearchInputComponent } from './Youtube/components/youtube/search-input/search-input.component';
 import { RouterDemoComponent } from './RouterDemo/RouterDemo/RouterDemo.component';
 import { DesignSystemComponent } from './DesignSystem/DesignSystem/DesignSystem.component';
-import { DesignSystemModule } from 'design-system';
+import { DesignSystemModule } from '../../../projects/design-system/src/public-api';
+import { MyDropDownModule } from '../../../projects/design-system/src/public-api';
 @NgModule({
   declarations:[
     YoutubeComponent,
@@ -18,7 +19,8 @@ import { DesignSystemModule } from 'design-system';
   imports:[
     MainRoutingModule,
     SharedModule,
-    DesignSystemModule
+    DesignSystemModule,
+    MyDropDownModule
   ],
   exports:[
     YoutubeComponent,

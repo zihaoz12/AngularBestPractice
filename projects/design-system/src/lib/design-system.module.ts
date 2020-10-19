@@ -5,15 +5,17 @@ import { CommonModule } from '@angular/common';
 
 
 
+
+
 @NgModule({
   declarations: [
     MyButtonComponent
   ],
   imports: [
-    CommonModule
+    CommonModule,
   ],
   exports: [
-    MyButtonComponent
+    MyButtonComponent,
   ]
 })
 export class DesignSystemModule { }
