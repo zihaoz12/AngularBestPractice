@@ -1,7 +1,7 @@
-<form  >
-  <select >
-    <option *ngFor="">
-
+<form >
+  <select class="dropdown_wrapper">
+    <option *ngFor="let val of options" [ngValue]="val[idName]" class="dropdown__options">
+      {{val[descriptionName]}}
     </option>
   </select>
 </form>

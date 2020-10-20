@@ -20,6 +20,21 @@ export class DesignSystemComponent implements OnInit {
   myid:string = 'BtnSecondary'
   btnName:string = 'BtnPrimary'
 
+
+  optionsValue = [
+    {
+      value:'1',
+      description:'Apple'
+    },
+    {
+      value:'2',
+      description:'Orange'
+    },
+    {
+      value:'3',
+      description:'Pear'
+    },
+  ]
   constructor() { }
 
   ngOnInit() {
